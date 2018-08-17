@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/img">
         <file>img/et-logo.png</file>
+        <file>img/blue_1.png</file>
+        <file>img/golden_1.png</file>
+        <file>img/magenta_1.png</file>
+        <file>img/tarif_white_1.png</file>
     </qresource>
 </RCC>

@@ -1,8 +1,8 @@
 import QtQuick 2.0
 
 Item {
-    width: 300
-    height: 300
+    width: 200
+    height: 200
 
     Image {
         width: parent.width

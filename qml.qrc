@@ -5,5 +5,10 @@
         <file>script.js</file>
         <file>Elements/AnimatedLogoElement.qml</file>
         <file>Elements/LogoImg.qml</file>
+        <file>Elements/ImgWhiteTarif.qml</file>
+        <file>Elements/ImgFuksiaTarif.qml</file>
+        <file>Elements/ImgBlueTarif.qml</file>
+        <file>Elements/ImgGoldenTarif.qml</file>
+        <file>Elements/Units.qml</file>
     </qresource>
 </RCC>
