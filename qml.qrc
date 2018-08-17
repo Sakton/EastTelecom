@@ -2,5 +2,8 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>ProcessingForm.js</file>
+        <file>script.js</file>
+        <file>Elements/AnimatedLogoElement.qml</file>
+        <file>Elements/LogoImg.qml</file>
     </qresource>
 </RCC>
