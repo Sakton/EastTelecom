@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ProcessingForm.js</file>
+    </qresource>
+</RCC>
