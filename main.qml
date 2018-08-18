@@ -10,36 +10,32 @@ ApplicationWindow {
     property int dpi: Screen.pixelDensity * 24
     color: "#01b7e7"
     visible: true
-    width: Script.dp(480, dpi)
-    height: Script.dp(640, dpi)
+    //    width: Script.dp(Screen.width, dpi)
+    //    height: Script.dp(Screen.height, dpi)
+    width: {
+        console.log(Screen.width)
+        Screen.width
+    }
+
+    height: {
+        console.log(Screen.height)
+        Screen.height
+    }
     title: qsTr("EAST TELECOM")
 
     Units {
         id: u
     }
 
-    //    AnimatedLogoElement {
-    //        width: parent.width
-    //        height: height1 * (parent.width / width1)
-    //    }
-    //    ImgFuksiaTarif {
-    //        id: d
-    //        x: 0
-    //        y: 0
-    //        width: parent.width
-    //        height: {
-    //            console.debug(parent.width / d.width)
-    //            d.height * (parent.width / d.width)
-    //        }
-    //    }
     ImgTarif {
         id: d
-        x: 0
-        y: 0
-        idSource: 90
-        width: parent.width
-        height: {
-            parent.height
-        }
+        x: (parent.width - d.width1) / 2
+        y: (parent.height - d.height1) / 2
+        width1: parent.width
+        //        idSource: 90
+        //        width: parent.width
+        //        height: {
+        //            parent.height
+        //        }
     }
 }
