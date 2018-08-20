@@ -5,5 +5,6 @@
         <file>img/golden_1.png</file>
         <file>img/magenta_1.png</file>
         <file>img/tarif_white_1.png</file>
+        <file>img/logo_big.png</file>
     </qresource>
 </RCC>
