@@ -1,8 +1,10 @@
 import QtQuick.Controls 1.4
-import QtQuick.Controls 2.0
+// import QtQuick.Controls 2.0
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import "Elements"
+import "Components"
+import "Pages"
 import "Script.js" as Script
 
 ApplicationWindow {
@@ -10,15 +12,15 @@ ApplicationWindow {
     property int dpi: Screen.pixelDensity * 24
     color: "#01b7e7"
     visible: true
-    //    width: Script.dp(Screen.width, dpi)
-    //    height: Script.dp(Screen.height, dpi)
     width: {
-        console.log(Screen.width)
+        if (Screen.width > 1000)
+            return 320
         Screen.width
     }
 
     height: {
-        console.log(Screen.height)
+        if (Screen.height > 1000)
+            return 533
         Screen.height
     }
     title: qsTr("EAST TELECOM")
@@ -27,17 +29,7 @@ ApplicationWindow {
         id: u
     }
 
-
-
-    ImgTarif {
-        id: d
-        x: (parent.width - d.width1) / 2
-        y: (parent.height - d.height1) / 2
-        width1: parent.width
-        //        idSource: 90
-        //        width: parent.width
-        //        height: {
-        //            parent.height
-        //        }
+    StartPage {
+        anchors.fill: parent
     }
 }
