@@ -7,4 +7,15 @@
         <file>img/tarif_white_1.png</file>
         <file>img/logo_big.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>ico/abonent.ico</file>
+        <file>ico/abonent.png</file>
+        <file>ico/operator.png</file>
+        <file>ico/tarifs.ico</file>
+        <file>ico/tarifs.png</file>
+        <file>ico/upravlenie.ico</file>
+        <file>ico/upravlenie.png</file>
+        <file>ico/ushi.png</file>
+        <file>main.cpp</file>
+    </qresource>
 </RCC>

@@ -27,6 +27,8 @@ ApplicationWindow {
         id: u
     }
 
+
+
     ImgTarif {
         id: d
         x: (parent.width - d.width1) / 2

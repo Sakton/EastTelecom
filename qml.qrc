@@ -3,9 +3,11 @@
         <file>main.qml</file>
         <file>ProcessingForm.js</file>
         <file>Script.js</file>
-        <file>Elements/AnimatedLogoElement.qml</file>
         <file>Elements/LogoImg.qml</file>
         <file>Elements/Units.qml</file>
         <file>Elements/ImgTarif.qml</file>
+        <file>Components/EastMenuBar.qml</file>
+        <file>Components/EastMenu.qml</file>
+        <file>Elements/EastMenuItem.qml</file>
     </qresource>
 </RCC>
