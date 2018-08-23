@@ -1,5 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
+import QtQuick.Controls.Styles 1.4
+import "../Elements"
 
 Item {
     id: i
@@ -14,14 +16,24 @@ Item {
             height: i.height / 2
             horizontalAlignment: Text.AlignHCenter
             font.pointSize: 14
-            text: "Login"
+
+            placeholderText: "Login"
+
+            focus: true
+            style: EastTextFieldStyle {
+            }
         }
         TextField {
             width: i.width
             height: i.height / 2
             horizontalAlignment: Text.AlignHCenter
+            echoMode: TextInput.Password
             font.pointSize: 14
-            text: "Password"
+            placeholderText: {
+                "Password"
+            }
+            style: EastTextFieldStyle {
+            }
         }
     }
 }

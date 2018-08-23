@@ -6,10 +6,12 @@
         <file>Elements/LogoImg.qml</file>
         <file>Elements/Units.qml</file>
         <file>Elements/ImgTarif.qml</file>
-        <file>Components/EastMenu.qml</file>
-        <file>Elements/EastMenuItem.qml</file>
         <file>Elements/EastIco.qml</file>
         <file>Pages/StartPage.qml</file>
         <file>Components/LoginPassBlock.qml</file>
+        <file>Elements/EastTextFieldStyle.qml</file>
+        <file>Components/EastStartPageButton.qml</file>
+        <file>Elements/StyleButton.qml</file>
+        <file>Elements/EastTextElement.qml</file>
     </qresource>
 </RCC>

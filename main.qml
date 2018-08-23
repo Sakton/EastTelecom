@@ -10,7 +10,7 @@ import "Script.js" as Script
 ApplicationWindow {
     id: mainWindow
     property int dpi: Screen.pixelDensity * 24
-    color: "#01b7e7"
+    color: "#403f3f"
     visible: true
     width: {
         if (Screen.width > 1000)

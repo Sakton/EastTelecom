@@ -3,6 +3,8 @@ import QtQuick.Controls 1.4
 import "../Elements"
 import "../Components"
 
+
+//TODO Text Style OR Font Style
 Item {
     id: startPg
     width: 480
@@ -17,14 +19,20 @@ Item {
         }
 
         LoginPassBlock {
-            width: 200
-            height: 50
+            width: startPg.width / 2
+            height: 80
         }
 
-        Rectangle {
-            width: 150
-            height: 150
-            color: "blue"
+        EastStartPageButton {
+            width: startPg.width / 2
+            height: 80
         }
+    }
+
+    Button {
+        y: parent.height - height
+        width: parent.width
+        height: 50
+        text: "Забыл пароль / Гость"
     }
 }
