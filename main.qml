@@ -13,6 +13,9 @@ ApplicationWindow {
     color: "#403f3f"
     visible: true
     width: {
+        console.debug("Screen.width ==> " + Screen.width)
+        console.debug("dpi ==> " + Screen.pixelDensity)
+        console.debug("Finction dp(320, dpi) ==> " + Script.dp(320, dpi))
         if (Screen.width > 1000)
             return 320
         Screen.width
@@ -23,6 +26,15 @@ ApplicationWindow {
             return 533
         Screen.height
     }
+
+    minimumWidth: {
+        Script.dp(320, dpi)
+    }
+
+    minimumHeight: {
+        Script.dp(533, dpi)
+    }
+
     title: qsTr("EAST TELECOM")
 
     Units {

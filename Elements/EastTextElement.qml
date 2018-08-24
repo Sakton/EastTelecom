@@ -5,4 +5,5 @@ Text {
     anchors.centerIn: parent
     font.pixelSize: 18
     font.family: "Helvetica"
+    color: "white"
 }
