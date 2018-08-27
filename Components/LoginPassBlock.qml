@@ -7,7 +7,7 @@ import "../Script.js" as Script
 Item {
     id: i
     width: 200
-    height: 100
+    height: 200
 
     Column {
         anchors.centerIn: parent
@@ -16,7 +16,7 @@ Item {
             width: i.width
             height: i.height / 2
             horizontalAlignment: Text.AlignHCenter
-            font.pointSize: 14
+            font.pixelSize: height * 2 / 3
             placeholderText: "Login"
             focus: true
             style: EastTextFieldStyle {
@@ -27,7 +27,7 @@ Item {
             height: i.height / 2
             horizontalAlignment: Text.AlignHCenter
             echoMode: TextInput.Password
-            font.pointSize: 14
+            font.pixelSize: height * 2 / 3
             placeholderText: "Password"
             style: EastTextFieldStyle {
             }

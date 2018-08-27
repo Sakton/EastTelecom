@@ -7,7 +7,7 @@ Button {
     height: 100
     EastTextElement {
         text: "LOGIN"
-        font.pixelSize: parent.height / 5
+        font.pixelSize: parent.height / 2
     }
     style: StyleButton {
     }

@@ -11,28 +11,32 @@ Item {
     width: 480
     height: 700
     Column {
-        spacing: parent.width / 10
+        spacing: parent.width / 7
         anchors.centerIn: parent
+        property real myWidth: startPg.width * 3 / 4
 
         LogoImg {
-            width: startPg.width / 2
-            //            height: startPg.width / 4
+            width: parent.myWidth
         }
 
         LoginPassBlock {
-            width: startPg.width / 2
-            height: startPg.width / 6
+            width: parent.myWidth
+            height: startPg.height / 7
         }
 
         EastStartPageButton {
-            width: startPg.width / 2
-            height: startPg.width / 6
+            width: parent.myWidth
+            height: startPg.width / 3
         }
     }
 
     ButtonGuest {
-        y: parent.height - height
+        y: {
+            console.debug("parent.height ==> " + parent.height)
+            console.debug("height ==> " + height)
+            parent.height - height
+        }
         width: startPg.width
-        height: startPg.width / 12
+        height: startPg.height / 12
     }
 }
