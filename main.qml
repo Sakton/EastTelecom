@@ -41,7 +41,11 @@ ApplicationWindow {
         id: u
     }
 
-    StartPage {
+
+    //    StartPage {
+    //        anchors.fill: parent
+    //    }
+    EastTabView {
         anchors.fill: parent
     }
 }

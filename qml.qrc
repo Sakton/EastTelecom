@@ -14,5 +14,7 @@
         <file>Elements/StyleButton.qml</file>
         <file>Elements/EastTextElement.qml</file>
         <file>Components/ButtonGuest.qml</file>
+        <file>Components/EastTabView.qml</file>
+        <file>Elements/EastTabViewStyle.qml</file>
     </qresource>
 </RCC>
