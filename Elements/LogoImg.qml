@@ -8,6 +8,8 @@ Item {
     Image {
         width: parent.width
         height: parent.height
+        implicitWidth: 162
+        implicitHeight: 43
         source: "qrc:/img/img/logo_big.png"
     }
 }

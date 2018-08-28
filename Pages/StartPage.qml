@@ -4,8 +4,6 @@ import "../Elements"
 import "../Components"
 import "../Script.js" as Script
 
-
-//TODO Text Style OR Font Style
 Item {
     id: startPg
     width: 480

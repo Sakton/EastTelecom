@@ -7,24 +7,15 @@ TabView {
     height: 533
     frameVisible: false
     style: EastTabViewStyle {
+        width: parent.width
+        height: parent.height / 10
     }
-    Tab {
+    EastTab {
         title: "111"
-        width: parent.width / 2
-
-        Rectangle {
-            //            width: 50
-            //            height: 50
-            color: "red"
-        }
+        colorr: "green"
     }
-    Tab {
+    EastTab {
         title: "222"
-        width: parent.width / 2
-        Rectangle {
-            //            width: 50
-            //            height: 50
-            color: "blue"
-        }
+        colorr: "gray"
     }
 }

@@ -16,5 +16,6 @@
         <file>Components/ButtonGuest.qml</file>
         <file>Components/EastTabView.qml</file>
         <file>Elements/EastTabViewStyle.qml</file>
+        <file>Elements/EastTab.qml</file>
     </qresource>
 </RCC>
