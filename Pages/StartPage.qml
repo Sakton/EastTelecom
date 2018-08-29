@@ -14,7 +14,9 @@ Item {
         property real myWidth: startPg.width * 3 / 4
 
         LogoImg {
-            width: parent.myWidth
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.myWidth * 0.75
+            height: startPg.height / 8
         }
 
         LoginPassBlock {
@@ -23,17 +25,14 @@ Item {
         }
 
         EastStartPageButton {
-            width: parent.myWidth
-            height: startPg.width / 3
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: parent.myWidth * 0.75
+            height: startPg.height / 9
         }
     }
 
     ButtonGuest {
-        y: {
-            console.debug("parent.height ==> " + parent.height)
-            console.debug("height ==> " + height)
-            parent.height - height
-        }
+        y: parent.height - height
         width: startPg.width
         height: startPg.height / 12
     }

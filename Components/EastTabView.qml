@@ -12,10 +12,10 @@ TabView {
     }
     EastTab {
         title: "111"
-        colorr: "green"
+        colorr: "#403f3f"
     }
     EastTab {
         title: "222"
-        colorr: "gray"
+        colorr: "#403f3f"
     }
 }

@@ -5,6 +5,6 @@ TextFieldStyle {
     background: Rectangle {
         radius: 0
         border.color: "black"
-        border.width: 2
+        border.width: 1
     }
 }

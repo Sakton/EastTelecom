@@ -11,10 +11,10 @@ TabViewStyle {
     tab: Rectangle {
         implicitWidth: tvs.width / 2
         implicitHeight: tvs.height
-        color: styleData.selected ? "red" : "blue"
+        color: styleData.selected ? "#403f3f" : "#696868"
         EastTextElement {
             anchors.centerIn: parent
-            color: styleData.selected ? "blue" : "red"
+            color: styleData.selected ? "white" : "black"
             font.pixelSize: tvs.height / 2
             text: styleData.title
         }

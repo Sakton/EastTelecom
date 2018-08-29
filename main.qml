@@ -40,8 +40,6 @@ ApplicationWindow {
     Units {
         id: u
     }
-
-
     //    StartPage {
     //        anchors.fill: parent
     //    }
