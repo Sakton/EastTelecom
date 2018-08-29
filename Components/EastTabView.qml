@@ -13,6 +13,11 @@ TabView {
     EastTab {
         title: "111"
         colorr: "#403f3f"
+        EastListView {
+            //            anchors.fill: parent
+            contentWidth: parent.width
+            contentHeight: parent.height
+        }
     }
     EastTab {
         title: "222"

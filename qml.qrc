@@ -17,5 +17,8 @@
         <file>Components/EastTabView.qml</file>
         <file>Elements/EastTabViewStyle.qml</file>
         <file>Elements/EastTab.qml</file>
+        <file>Elements/EastListView.qml</file>
+        <file>Elements/Model_East_List.qml</file>
+        <file>Elements/EastDelegateEastListView.qml</file>
     </qresource>
 </RCC>
