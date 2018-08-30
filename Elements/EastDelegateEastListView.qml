@@ -3,35 +3,62 @@ import QtQuick.Layouts 1.3
 
 Item {
     id: rootItem
-    property int mySizeImg: 48
+    property int mySizeImg: 64
     width: 320
     height: mySizeImg
     RowLayout {
         anchors.fill: parent
-        spacing: 1
-        Layout.margins: 1
-
+        spacing: 0
+        Layout.margins: 0
         Rectangle {
             id: imgRect
             Layout.minimumWidth: rootItem.mySizeImg
             Layout.minimumHeight: rootItem.mySizeImg
             Layout.alignment: Qt.AlignCenter
-            //            border.color: "red"
+            color: "#403f3f"
+            border.width: 1
+            border.color: "black"
             Image {
                 anchors.fill: parent
-                source: "qrc:/img/ico/abonent.png"
+                source: model.thematicImage
             }
         }
-        Rectangle {
+        ColumnLayout {
             Layout.minimumWidth: rootItem.width - imgRect.width
             Layout.minimumHeight: rootItem.mySizeImg
             Layout.fillWidth: true
-            //            border.color: "green"
-            EastTextElement {
-                anchors.centerIn: parent
-                font.pixelSize: parent.height / 2
-                color: "black"
-                text: "qw: " + model.name + " Num: " + model.number
+            spacing: 0
+            Rectangle {
+                Layout.minimumWidth: rootItem.width - imgRect.width
+                Layout.minimumHeight: rootItem.mySizeImg / 2
+                color: "#403f3d"
+                border.width: 1
+                border.color: "black"
+                Text {
+                    font.pixelSize: parent.height / 2
+                    anchors.left: parent.left
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.leftMargin: 5
+                    font.family: "Helvetica"
+                    color: "white"
+                    text: model.name
+                }
+            }
+            Rectangle {
+                Layout.minimumWidth: rootItem.width - imgRect.width
+                Layout.minimumHeight: rootItem.mySizeImg / 2
+                color: "#403f3f"
+                border.width: 1
+                border.color: "black"
+                Text {
+                    font.pixelSize: parent.height / 2
+                    anchors.left: parent.left
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.leftMargin: 5
+                    font.family: "Helvetica"
+                    color: "white"
+                    text: model.value
+                }
             }
         }
     }
