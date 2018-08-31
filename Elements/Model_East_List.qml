@@ -1,52 +1,42 @@
 import QtQuick 2.0
 
 ListModel {
+    id: eastModel
+    property int typeInfo: 0
+    //TODO набор данных 1
+    property var names: ["Баланс:", "Договор:", "Владелец:", "Статус:", "Тариф:", "Бонус:"]
+    property var values: ["-3333.33", "ABC-12345/2018 до н.э.", "Васиа Пупеццо ибн Сауд", "ACTIVE", "Домашний", "100500%"]
+    property var thematicImages: ["qrc:/img/ico/abonent.png", "qrc:/img/ico/upravlenie.png", "qrc:/img/ico/operator.png", "qrc:/img/ico/ushi.png", "qrc:/img/ico/tarifs.png", "qrc:/img/ico/abonent.png"]
 
-    ListElement {
-        name: "Баланс:"
-        value: "-3333.33"
-        thematicImage: "qrc:/img/ico/abonent.png"
-        //        number: 11
-    }
-    ListElement {
-        name: "Договор:"
-        value: "ABC-12345/2018 до н.э."
-        thematicImage: "qrc:/img/ico/upravlenie.png"
-        //        number: 22
-    }
-    ListElement {
-        name: "Владелец:"
-        value: "Васиа Пупеццо ибн Сауд"
-        thematicImage: "qrc:/img/ico/operator.png"
-        //        number: 33
-    }
-    ListElement {
-        name: "Статус:"
-        value: "ACTIVE"
-        thematicImage: "qrc:/img/ico/ushi.png"
-        //        number: 33
-    }
-    ListElement {
-        name: "Тариф:"
-        value: "Домашний"
-        thematicImage: "qrc:/img/ico/tarifs.png"
-        //        number: 33
-    }
-    ListElement {
-        name: "Бонус:"
-        value: "100500%"
-        thematicImage: "qrc:/img/ico/abonent.png"
-        //        number: 33
+    //TODO набор данных 2
+
+    //***
+    Component.onCompleted: {
+
+        //        modelTypeInfoQuery()
+        switch (typeInfo) {
+        case 0:
+            addItemModel0()
+            break
+        case 1:
+            console.debug("I'm method addItemModel1()")
+            break
+        default:
+            addItemModel0()
+            break
+        }
     }
 
-    //    Item {
-    //        id: r
-    //        Repeater {
-    //            model: 3
-    //            ListElement {
-    //                name: "name: " + index()
-    //                number: index() + index()
-    //            }
-    //        }
-    //    }
+    //TODO подготовка к динамике
+    function addItemModel0() {
+        for (var i = 0; i < names.length; ++i) {
+            eastModel.append({
+                                 "name": names[i],
+                                 "value": values[i],
+                                 "thematicImage": thematicImages[i]
+                             })
+        }
+    }
+
+    function addItemModel1() {}
 }

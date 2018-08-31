@@ -5,22 +5,30 @@ import "../Elements"
 TabView {
     width: 320
     height: 533
-    frameVisible: false
+    property int typeInfo: 0
+    frameVisible: {
+        console.debug(currentIndex)
+        false
+    }
+
     style: EastTabViewStyle {
         width: parent.width
         height: parent.height / 10
     }
+
     EastTab {
-        title: "111"
-        colorr: "#403f3f"
-        EastListView {
-            //            anchors.fill: parent
-            contentWidth: parent.width
-            contentHeight: parent.height
+        typeInfo: 0
+        title: {
+            return "111"
         }
+        colorr: "#403f3f"
     }
+
     EastTab {
-        title: "222"
+        typeInfo: 1
+        title: {
+            return "222"
+        }
         colorr: "#403f3f"
     }
 }
