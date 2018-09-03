@@ -12,17 +12,13 @@ Tab {
         color: parent.colorr
         Loader {
             id: tabViewLoader
-            source: {
-                "qrc:/Elements/EastListView.qml"
-            }
             width: parent.width
             height: parent.height
+            Component.onCompleted: {
+                setSource("qrc:/Elements/EastListView.qml", {
+                              "typeInfo": tab.typeInfo
+                          })
+            }
         }
     }
-
-    //    Connections {
-    //        id: elw
-    //        target: EastListView {
-    //        }
-    //    }
 }

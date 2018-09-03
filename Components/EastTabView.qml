@@ -7,7 +7,7 @@ TabView {
     height: 533
     property int typeInfo: 0
     frameVisible: {
-        console.debug(currentIndex)
+        //        console.debug(currentIndex)
         false
     }
 
