@@ -20,17 +20,13 @@ TabView {
 
     EastTab {
         typeInfo: 0
-        title: {
-            return "111"
-        }
+        title: "ИНФО"
         colorr: "#403f3f"
     }
 
     EastTab {
         typeInfo: 1
-        title: {
-            return "222"
-        }
+        title: "УПРАВЛЕНИЕ"
         colorr: "#403f3f"
     }
 }

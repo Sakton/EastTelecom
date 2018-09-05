@@ -1,10 +1,13 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
+import "../Elements"
 
 Rectangle {
     id: root
     width: 380
     height: 25
+    border.width: 1
+    border.color: "red"
     RowLayout {
         anchors.fill: parent
         spacing: 0

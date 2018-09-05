@@ -1,5 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Controls 1.4
+import "../Components"
 
 Tab {
     id: tab
@@ -19,6 +20,11 @@ Tab {
             height: parent.height / 10
             color: "red"
             z: 1
+            EastTextElement {
+                anchors.centerIn: parent
+                text: "INTERNET"
+                font.pixelSize: parent.height / 2
+            }
         }
 
         Loader {
