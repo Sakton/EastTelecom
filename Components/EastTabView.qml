@@ -3,9 +3,11 @@ import QtQuick.Controls 1.4
 import "../Elements"
 
 TabView {
+    id: tw
     width: 320
     height: 533
     property int typeInfo: 0
+    property int screenHeight: 580
     frameVisible: {
         //        console.debug(currentIndex)
         false

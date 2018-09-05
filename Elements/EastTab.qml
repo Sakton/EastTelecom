@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick 2.9
 import QtQuick.Controls 1.4
 
 Tab {
@@ -18,6 +18,7 @@ Tab {
             width: parent.width
             height: parent.height / 10
             color: "red"
+            z: 1
         }
 
         Loader {
@@ -32,16 +33,12 @@ Tab {
             }
         }
 
-        Rectangle {
-            id: rec2
-            y: tabViewLoader.height
+        EastButtonInrenet_IpTV {
+            id: k
             width: parent.width
-            height: parent.height / 10
-            color: "blue"
+            height: parent.height / 14
+            y: tab.height - height
+            z: 1
         }
     }
-
-    //    Loader {
-    //        //TODO тут кнопки инет/айпитв
-    //    }
 }

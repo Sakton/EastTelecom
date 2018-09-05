@@ -20,5 +20,7 @@
         <file>Elements/EastListView.qml</file>
         <file>Elements/Model_East_List.qml</file>
         <file>Elements/EastDelegateEastListView.qml</file>
+        <file>Elements/EastButtonInrenet_IpTV.qml</file>
+        <file>Elements/EastBtnForInetIpTv.qml</file>
     </qresource>
 </RCC>

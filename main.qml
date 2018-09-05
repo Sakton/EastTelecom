@@ -9,6 +9,7 @@ import "Script.js" as Script
 
 ApplicationWindow {
     id: mainWindow
+    property int screenHeight: Screen.height
     property int dpi: Screen.pixelDensity * 24
     color: "#403f3f"
     visible: true
