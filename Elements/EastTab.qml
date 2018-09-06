@@ -39,12 +39,16 @@ Tab {
             }
         }
 
-        EastButtonInrenet_IpTV {
+        Loader {
             id: k
             width: parent.width
             height: parent.height / 14
             y: tab.height - height
             z: 1
+            Component.onCompleted: {
+                if (typeInfo == 0)
+                    setSource("qrc:/Components/EastButtonInrenet_IpTV.qml")
+            }
         }
     }
 }
