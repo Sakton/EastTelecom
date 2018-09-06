@@ -15,7 +15,7 @@ TabViewStyle {
         EastTextElement {
             anchors.centerIn: parent
             color: styleData.selected ? "white" : "black"
-            font.pixelSize: tvs.height / 2
+            font.pixelSize: tvs.height / 2.2
             text: styleData.title
         }
     }
