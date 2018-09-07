@@ -9,38 +9,65 @@ Tab {
     property int typeInfo: 0
     signal signalTypeInfo(int typeInfo)
 
-    //    Loader {
-    //        //TODO тут интернет
-    //    }
     Rectangle {
         color: parent.colorr
-        Rectangle {
-            id: rec1
+        Loader {
+            id: internetIptvPole
             width: parent.width
             height: parent.height / 10
-            color: "red"
             z: 1
-            EastTextElement {
-                anchors.centerIn: parent
-                text: "INTERNET"
-                font.pixelSize: parent.height / 2
+            Component.onCompleted: {
+                if (typeInfo == 0)
+                    setSource("qrc:/Components/EastPoleInternetIpTv.qml")
+            }
+            Connections {
+                target: blockButtonsInternetIpTv.item
+                onTypeClickedButtonInfo: {
+                    internetIptvPole.item.txt = typeButtonClicked
+                }
             }
         }
 
         Loader {
             id: tabViewLoader
             width: parent.width
-            height: parent.height - rec1.height
-            y: rec1.height
+            height: {
+                if (typeInfo == 0)
+                    parent.height - internetIptvPole.height
+                else
+                    parent.height
+            }
+            y: {
+                if (typeInfo == 0)
+                    return internetIptvPole.height
+                else
+                    return 0
+            }
             Component.onCompleted: {
                 setSource("qrc:/Elements/EastListView.qml", {
                               "typeInfo": tab.typeInfo
                           })
             }
+            Connections {
+                target: blockButtonsInternetIpTv.item
+                onTypeClickedButtonInfo: {
+                    if (typeButtonClicked === "INTERNET") {
+                        tabViewLoader.setSource(
+                                    "qrc:/Elements/EastListView.qml", {
+                                        "typeInfo": tab.typeInfo
+                                    })
+                    } else if (typeButtonClicked === "IP TV") {
+                        tabViewLoader.setSource(
+                                    "qrc:/Elements/EastListView.qml", {
+                                        "typeInfo": 2 //TODO магическое число, подумать... Тип данных в модель
+                                    })
+                    }
+                }
+            }
         }
 
         Loader {
-            id: k
+            id: blockButtonsInternetIpTv
             width: parent.width
             height: parent.height / 14
             y: tab.height - height

@@ -2,6 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     property string textt: "BUTTON"
+    signal clickedButtonIntIpTv(string texttButtonIpTv)
     color: "blue"
     EastTextElement {
         id: t
@@ -12,7 +13,7 @@ Rectangle {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            console.debug("text button ==> " + t.text)
+            clickedButtonIntIpTv(t.text)
         }
     }
 }
