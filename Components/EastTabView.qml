@@ -8,10 +8,7 @@ TabView {
     height: 533
     property int typeInfo: 0
     property int screenHeight: 580
-    frameVisible: {
-        //        console.debug(currentIndex)
-        false
-    }
+    frameVisible: false
 
     style: EastTabViewStyle {
         width: parent.width
