@@ -41,10 +41,19 @@ ApplicationWindow {
     Units {
         id: u
     }
+
     //    StartPage {
     //        anchors.fill: parent
     //    }
-    EastTabView {
+    //    EastTabView {
+    //        anchors.fill: parent
+    //    }
+
+    //TODO тут!!!
+    EastMenuListView {
         anchors.fill: parent
     }
+    //    EastDrawerBox {
+
+    //    }
 }

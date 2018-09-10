@@ -23,5 +23,9 @@
         <file>Elements/EastBtnForInetIpTv.qml</file>
         <file>Components/EastButtonInrenet_IpTV.qml</file>
         <file>Components/EastPoleInternetIpTv.qml</file>
+        <file>Elements/Model_East_Menu_List.qml</file>
+        <file>Elements/EastMenuListView.qml</file>
+        <file>Elements/EastMenuDelegate.qml</file>
+        <file>Components/EastDrawerBox.qml</file>
     </qresource>
 </RCC>

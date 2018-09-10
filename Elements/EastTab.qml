@@ -10,7 +10,9 @@ Tab {
     signal signalTypeInfo(int typeInfo)
 
     Rectangle {
+        anchors.fill: parent
         color: parent.colorr
+
         Loader {
             id: internetIptvPole
             width: parent.width

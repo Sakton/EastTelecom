@@ -8,6 +8,7 @@ ListView {
     model: Model_East_List {
         typeInfo: lw.typeInfo
     }
+
     delegate: EastDelegateEastListView {
         width: parent.width
     }

@@ -17,14 +17,14 @@ Rectangle {
             Layout.minimumHeight: rootItem.mySizeImg
             Layout.alignment: Qt.AlignCenter
             color: {
-                if (model.name === "Тариф:")
+                if (model.name === "Текущий тариф:")
                     "#696868"
                 else
                     "#403f3f"
             }
             border.width: 1
             border.color: {
-                if (model.name === "Тариф:")
+                if (model.name === "Текущий тариф:")
                     "gray"
                 else
                     "black"
@@ -45,14 +45,14 @@ Rectangle {
                 Layout.minimumWidth: rootItem.width - imgRect.width
                 Layout.minimumHeight: rootItem.mySizeImg / 2
                 color: {
-                    if (model.name === "Тариф:")
+                    if (model.name === "Текущий тариф:")
                         "#696868"
                     else
                         "#403f3f"
                 }
                 border.width: 1
                 border.color: {
-                    if (model.name === "Тариф:")
+                    if (model.name === "Текущий тариф:")
                         "gray"
                     else
                         "black"
@@ -73,14 +73,14 @@ Rectangle {
                 Layout.minimumWidth: rootItem.width - imgRect.width
                 Layout.minimumHeight: rootItem.mySizeImg / 2
                 color: {
-                    if (model.name === "Тариф:")
+                    if (model.name === "Текущий тариф:")
                         "#696868"
                     else
                         "#403f3f"
                 }
                 border.width: 1
                 border.color: {
-                    if (model.name === "Тариф:")
+                    if (model.name === "Текущий тариф:")
                         "gray"
                     else
                         "black"
@@ -102,14 +102,14 @@ Rectangle {
         anchors.fill: parent
         onClicked: {
             switch (model.name) {
-            case "Тариф:":
+            case "Текущий тариф:":
                 console.debug(model.name)
                 break
             }
         }
         onPressed: {
             switch (model.name) {
-            case "Тариф:":
+            case "Текущий тариф:":
                 firstRect.color = "black"
                 secondRect.color = "black"
                 imgRect.color = "black"
@@ -121,7 +121,7 @@ Rectangle {
         }
         onReleased: {
             switch (model.name) {
-            case "Тариф:":
+            case "Текущий тариф:":
                 firstRect.color = "#696868"
                 secondRect.color = "#696868"
                 imgRect.color = "#696868"
