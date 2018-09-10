@@ -1,16 +1,10 @@
 import QtQuick 2.0
 
 ListView {
+    id: lw
     width: 320
 
-    header: Rectangle {
-        id: r
-        height: 64
-        Text {
-            anchors.centerIn: parent
-            font.pixelSize: r.height / 2
-            text: "Header"
-        }
+    header: EastHeaderMenu {
     }
 
     model: Model_East_Menu_List {

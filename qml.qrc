@@ -27,5 +27,6 @@
         <file>Elements/EastMenuListView.qml</file>
         <file>Elements/EastMenuDelegate.qml</file>
         <file>Components/EastDrawerBox.qml</file>
+        <file>Elements/EastHeaderMenu.qml</file>
     </qresource>
 </RCC>
