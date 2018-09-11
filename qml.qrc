@@ -28,5 +28,6 @@
         <file>Elements/EastMenuDelegate.qml</file>
         <file>Components/EastDrawerBox.qml</file>
         <file>Elements/EastHeaderMenu.qml</file>
+        <file>Components/EastButtonMenu.qml</file>
     </qresource>
 </RCC>

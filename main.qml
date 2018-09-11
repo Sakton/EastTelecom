@@ -49,11 +49,9 @@ ApplicationWindow {
     //        anchors.fill: parent
     //    }
 
-    //TODO тут!!!
-    EastMenuListView {
-        anchors.fill: parent
-    }
     //    EastDrawerBox {
-
     //    }
+    //TODO тут!!!
+    EastButtonMenu {
+    }
 }

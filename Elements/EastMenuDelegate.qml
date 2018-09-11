@@ -2,15 +2,16 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 
 Rectangle {
+    property int size: 64
     width: 320
-    height: 64
+    height: size
     RowLayout {
         anchors.fill: parent
         spacing: 0
 
         Rectangle {
-            Layout.minimumWidth: 64
-            Layout.minimumHeight: 64
+            Layout.minimumWidth: size
+            Layout.minimumHeight: size
             color: "red"
             border.color: "black"
             border.width: 1
@@ -36,9 +37,6 @@ Rectangle {
                 color: "white"
                 text: model.nameMenuItem
             }
-            //            EastTextElement {
-            //                text: model.nameMenuItem
-            //            }
         }
     }
 }
