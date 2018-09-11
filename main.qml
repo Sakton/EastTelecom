@@ -53,5 +53,6 @@ ApplicationWindow {
     //    }
     //TODO тут!!!
     EastButtonMenu {
+        width: parent.width
     }
 }
