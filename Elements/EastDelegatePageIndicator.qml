@@ -4,9 +4,14 @@ Rectangle {
     property int k: 1
     width: 15 * k
     height: 15 * k
-    color: "black"
-    Image {
-        anchors.fill: parent
-        source: "qrc:/img/ico/Iconew.png"
+    color: "white"
+    radius: width / 2
+
+    Rectangle {
+        anchors.centerIn: parent
+        width: parent.width / 2
+        height: parent.height / 2
+        radius: width / 2
+        color: "red"
     }
 }
