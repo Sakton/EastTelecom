@@ -29,9 +29,9 @@ Rectangle {
         }
 
         Rectangle {
-            color: "#403f3f"
+            color: "#696868"
             Layout.fillWidth: true
-            Layout.maximumWidth: 2
+            Layout.maximumWidth: 1
             height: parent.height
         }
 
@@ -86,5 +86,12 @@ Rectangle {
                 }
             }
         }
+    }
+
+    Rectangle {
+        width: parent.width
+        height: 1
+        y: parent.height
+        color: "#696868"
     }
 }

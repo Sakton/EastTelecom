@@ -45,14 +45,20 @@ ApplicationWindow {
     //    StartPage {
     //        anchors.fill: parent
     //    }
+
     //    EastTabView {
     //        anchors.fill: parent
     //    }
 
     //    EastDrawerBox {
     //    }
+
+    //    EastButtonMenu {
+    //        width: parent.width
+    //    }
+
     //TODO тут!!!
-    EastButtonMenu {
-        width: parent.width
+    EastSwipeView {
+        anchors.fill: parent
     }
 }
