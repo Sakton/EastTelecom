@@ -57,8 +57,12 @@ ApplicationWindow {
     //        width: parent.width
     //    }
 
+    //    EastSwipeView {
+    //        anchors.fill: parent
+    //    }
+
     //TODO тут!!!
-    EastSwipeView {
+    EastTarifElementPage {
         anchors.fill: parent
     }
 }

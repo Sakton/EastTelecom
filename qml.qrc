@@ -33,5 +33,6 @@
         <file>Elements/EastItemSwipeView.qml</file>
         <file>Elements/EastDelegatePageIndicator.qml</file>
         <file>Elements/EastPageIndicatorSwipeView.qml</file>
+        <file>Elements/EastTarifElementPage.qml</file>
     </qresource>
 </RCC>
