@@ -1,10 +1,11 @@
 import QtQuick 2.0
 
 Rectangle {
-    property int k: 1
-    width: 15 * k
-    height: 15 * k
-    color: "white"
+    property color colorOne: "white"
+    property color colorTwo: "red"
+    width: 15
+    height: 15
+    color: colorOne
     radius: width / 2
 
     Rectangle {
@@ -12,6 +13,6 @@ Rectangle {
         width: parent.width / 2
         height: parent.height / 2
         radius: width / 2
-        color: "red"
+        color: colorTwo
     }
 }

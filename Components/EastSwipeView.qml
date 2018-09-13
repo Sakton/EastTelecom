@@ -33,7 +33,6 @@ Item {
     EastPageIndicatorSwipeView {
         count: view.count
         currentIndex: view.currentIndex
-
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
     }
