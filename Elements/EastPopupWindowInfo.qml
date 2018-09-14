@@ -14,8 +14,9 @@ Rectangle {
         anchors.fill: parent
         spacing: 0
         Item {
-            Layout.minimumWidth: parent.width
-            Layout.minimumHeight: parent.height / 8
+            Layout.maximumHeight: parent.height / 8
+            Layout.fillHeight: true
+            Layout.fillWidth: true
             EastTextElement {
                 anchors.centerIn: parent
                 opacity: 1
@@ -25,8 +26,9 @@ Rectangle {
         }
 
         Item {
-            Layout.minimumWidth: parent.width
-            Layout.minimumHeight: parent.height / 2
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.maximumHeight: parent.height / 2
             EastTextElement {
                 anchors.centerIn: parent
                 opacity: 1
@@ -36,11 +38,19 @@ Rectangle {
         }
 
         Item {
-            Layout.minimumWidth: parent.width
-            Layout.minimumHeight: parent.height / 8
+            Layout.maximumHeight: parent.height / 8
+            Layout.fillHeight: true
+            Layout.fillWidth: true
 
-            EastButtonTarifPage {
+            //            EastButtonTarifPage {
+            //                anchors.fill: parent
+            //                anchors.leftMargin: parent.width / 10
+            //                anchors.rightMargin: parent.width / 10
+            //            }
+            EastConfirmChangeTariffButtonBlock {
                 anchors.fill: parent
+                //                anchors.leftMargin: parent.width / 10
+                //                anchors.rightMargin: parent.width / 10
             }
         }
     }
