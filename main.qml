@@ -60,9 +60,15 @@ ApplicationWindow {
     //    EastSwipeView {
     //        anchors.fill: parent
     //    }
+    //    EastTarifElementPage {
+    //        anchors.fill: parent
+    //    }
 
     //TODO тут!!!
-    EastTarifElementPage {
-        anchors.fill: parent
+    EastPopupWindowInfo {
+        typeInfoWindow: 0
+        width: parent.width * 0.8
+        height: parent.height * 0.8
+        anchors.centerIn: parent
     }
 }

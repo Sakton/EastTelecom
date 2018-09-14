@@ -1,16 +1,33 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.3
+import "../Elements"
 
 Rectangle {
     width: 320
     height: 580
+    property int indexItem: 3
+    property string textTarifName: "ТАРИФ"
+    property string textItem: "bla bla bla"
 
     Image {
         id: backgroundImg
         opacity: 0.8
         anchors.fill: parent
-        source: "qrc:/img/img/tarif_white_1.png"
+        source: {
+            switch (indexItem) {
+            case 0:
+                return "qrc:/img/img/tarif_white_1.png"
+            case 1:
+                return "qrc:/img/img/magenta_1.png"
+            case 2:
+                return "qrc:/img/img/blue_1.png"
+            case 3:
+                return "qrc:/img/img/golden_1.png"
+            default:
+                return "qrc:/img/img/golden_1.png"
+            }
+        }
 
         ColumnLayout {
             anchors.fill: parent
@@ -19,13 +36,14 @@ Rectangle {
             Item {
                 Layout.minimumWidth: parent.width
                 Layout.minimumHeight: parent.height / 8
+
                 Text {
                     id: t1
                     anchors.centerIn: parent
                     font.pixelSize: parent.height / 2
                     font.family: "Helvetica"
                     color: "black"
-                    text: "ТАРИФ"
+                    text: textTarifName
                 }
             }
 
@@ -42,18 +60,7 @@ Rectangle {
                     font.pixelSize: parent.height / 19
                     textFormat: Text.StyledText
                     wrapMode: Text.Wrap
-                    text: "Наш стартовый тарифный план с фиксированной
-скоростью до <b>12 Мегабит</b> в секунду.
-Достоинстом является низкая стоимость. Великолепно
-подходит для подавляющего большинства ежедневных
-нужд как то - поиск и просмотр информации, общения
-в социальных сетях, Skype, любые IM, онлайн игры
-<br/>Недостатки - не очень хорошо подходит для
-просмотра и скачиваний большого количества данных,
-(фильмы, обновления для программных продуктов, в том
-числе и для игр).  На этом тарифном плане недоступна
-услуга по снятию ограничений скорости в дневное и
-ночное время."
+                    text: textItem
                 }
             }
 
@@ -61,11 +68,10 @@ Rectangle {
                 Layout.minimumWidth: parent.width
                 Layout.minimumHeight: parent.height / 8
 
-                Button {
+                EastButtonTarifPage {
                     anchors.fill: parent
                     anchors.leftMargin: 30
                     anchors.rightMargin: 30
-                    text: "БАТОН"
                 }
             }
         }

@@ -34,5 +34,7 @@
         <file>Elements/EastDelegatePageIndicator.qml</file>
         <file>Elements/EastPageIndicatorSwipeView.qml</file>
         <file>Elements/EastTarifElementPage.qml</file>
+        <file>Elements/EastButtonTarifPage.qml</file>
+        <file>Elements/EastPopupWindowInfo.qml</file>
     </qresource>
 </RCC>
