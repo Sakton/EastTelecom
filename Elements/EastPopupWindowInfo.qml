@@ -16,12 +16,13 @@ Rectangle {
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
+
         Item {
             Layout.maximumHeight: parent.height / 8
             Layout.fillHeight: true
             Layout.fillWidth: true
             EastTextElement {
-                opacity: 1
+                anchors.fill: parent
                 color: "white"
                 text: textTitle
             }

@@ -65,11 +65,15 @@ ApplicationWindow {
     //        anchors.fill: parent
     //    }
 
+    //    EastPopupWindowInfo {
+    //        typeInfoWindow: 1
+    //        width: parent.width * 0.8
+    //        height: parent.height * 0.8
+    //        anchors.centerIn: parent
+    //    }
+
     //TODO тут!!!
-    EastPopupWindowInfo {
-        typeInfoWindow: 1
-        width: parent.width * 0.8
-        height: parent.height * 0.8
-        anchors.centerIn: parent
+    EastSupportComponentWindow {
+        anchors.fill: parent
     }
 }

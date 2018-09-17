@@ -17,6 +17,7 @@
         <file>main.cpp</file>
         <file>ico/menu_show_list.png</file>
         <file>ico/Iconew.png</file>
+        <file>ico/10.png</file>
     </qresource>
     <qresource prefix="/">
         <file>ico/abonent.ico</file>

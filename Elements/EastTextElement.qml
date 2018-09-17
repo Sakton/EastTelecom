@@ -2,7 +2,8 @@ import QtQuick 2.0
 
 Text {
     text: "I'm textElement"
-    anchors.centerIn: parent
+    horizontalAlignment: Text.AlignHCenter
+    verticalAlignment: Text.AlignVCenter
     wrapMode: Text.Wrap
     textFormat: Text.StyledText
     font.pixelSize: 18
