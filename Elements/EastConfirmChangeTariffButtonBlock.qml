@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 
-Rectangle {
+Item {
     width: 250
     height: 50
 
@@ -14,7 +14,9 @@ Rectangle {
             Layout.maximumWidth: parent.width
             Layout.fillWidth: true
             Layout.fillHeight: true
-            color: "red"
+            color: "#696868"
+            border.width: 1
+            border.color: "black"
 
             EastTextElement {
                 anchors.centerIn: parent
@@ -22,13 +24,13 @@ Rectangle {
             }
 
             MouseArea {
+                anchors.fill: parent
                 onPressed: {
-
-                    //TODO тут
+                    btnOk.color = "#7f7f7f"
                 }
 
                 onReleased: {
-
+                    btnOk.color = "#696868"
                 }
             }
         }
@@ -38,7 +40,9 @@ Rectangle {
             Layout.maximumWidth: parent.width
             Layout.fillWidth: true
             Layout.fillHeight: true
-            color: "blue"
+            color: "#696868"
+            border.width: 1
+            border.color: "black"
 
             EastTextElement {
                 anchors.centerIn: parent
@@ -46,12 +50,13 @@ Rectangle {
             }
 
             MouseArea {
+                anchors.fill: parent
                 onPressed: {
-
+                    btnNo.color = "#7f7f7f"
                 }
 
                 onReleased: {
-
+                    btnNo.color = "#696868"
                 }
             }
         }

@@ -2,7 +2,10 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 
 Rectangle {
+    id: root
     property int typeInfoWindow: 0
+    property string textTitle: "textTitle"
+    property string textDescription: "textDescription <b>textDescription</b> <i>textDescription</i> <b><i>textDescription</i></b>"
     width: 250
     height: 450
     anchors.centerIn: parent
@@ -18,22 +21,21 @@ Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
             EastTextElement {
-                anchors.centerIn: parent
                 opacity: 1
                 color: "white"
-                text: "Тариф"
+                text: textTitle
             }
         }
 
         Item {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            Layout.maximumHeight: parent.height / 2
+            Layout.maximumHeight: parent.height * 3 / 4
             EastTextElement {
-                anchors.centerIn: parent
-                opacity: 1
+                anchors.fill: parent
+                anchors.margins: 5
                 color: "white"
-                text: "Текст про текущий тариф"
+                text: textDescription
             }
         }
 
@@ -41,16 +43,29 @@ Rectangle {
             Layout.maximumHeight: parent.height / 8
             Layout.fillHeight: true
             Layout.fillWidth: true
-
-            //            EastButtonTarifPage {
-            //                anchors.fill: parent
-            //                anchors.leftMargin: parent.width / 10
-            //                anchors.rightMargin: parent.width / 10
-            //            }
-            EastConfirmChangeTariffButtonBlock {
+            Loader {
                 anchors.fill: parent
-                //                anchors.leftMargin: parent.width / 10
-                //                anchors.rightMargin: parent.width / 10
+                Component.onCompleted: {
+                    console.debug(root.typeInfoWindow)
+                    switch (root.typeInfoWindow) {
+                    case 0:
+                        setSource("qrc:/Elements/EastButtonTarifPage.qml", {
+                                      "textButton": "ПЕРЕЙТИ"
+                                  })
+                        break
+                    case 1:
+                        setSource("qrc:/Elements/EastConfirmChangeTariffButtonBlock.qml")
+                        break
+                    case 2:
+                        setSource("qrc:/Elements/EastButtonTarifPage.qml", {
+                                      "textButton": "СЛУЖБА ПОДДЕРЖКИ"
+                                  })
+                        break
+                    case 3:
+                        setSource("")
+                        break
+                    }
+                }
             }
         }
     }
