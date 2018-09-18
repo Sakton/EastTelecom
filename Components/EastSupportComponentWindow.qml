@@ -5,6 +5,7 @@ import "../Elements"
 Rectangle {
     width: 320
     height: 580
+    color: "#7f7f7f"
 
     ColumnLayout {
         anchors.fill: parent
@@ -20,12 +21,12 @@ Rectangle {
                 Rectangle {
                     Layout.minimumWidth: parent.width * 2 / 3
                     Layout.fillHeight: true
-                    color: "black"
+                    color: "#403f3f"
 
                     EastTextElement {
                         anchors.fill: parent
                         font.pixelSize: parent.height / 4
-                        text: "можно написать или позвонить"
+                        text: "можно написать или заказать обратный звонок"
                     }
                 }
 
@@ -37,8 +38,19 @@ Rectangle {
         }
 
         EastTextAreaElement {
+            Layout.margins: 10
             Layout.fillWidth: true
             Layout.fillHeight: true
+            focus: true
+        }
+
+        EastButtonTarifPage {
+            Layout.minimumHeight: parent.height / 12
+            Layout.minimumWidth: parent.width / 2
+            Layout.alignment: Qt.AlignHCenter
+            colorButton: "#403f3f"
+            colorButtonHover: "#696868"
+            textButton: "ОТПРАВИТЬ"
         }
     }
 }

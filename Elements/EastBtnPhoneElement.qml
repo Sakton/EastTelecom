@@ -8,4 +8,12 @@ Item {
         anchors.fill: parent
         source: "qrc:/img/ico/10.png"
     }
+
+    MouseArea {
+        anchors.fill: parent
+
+        onClicked: {
+            console.debug("Click phone")
+        }
+    }
 }

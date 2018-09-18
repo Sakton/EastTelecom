@@ -41,5 +41,8 @@
         <file>Elements/EastBtnPhoneElement.qml</file>
         <file>Elements/EastTextAreaElement.qml</file>
         <file>Elements/EastTextAreaStyle.qml</file>
+        <file>Components/EastCallbackComponentWindow.qml</file>
+        <file>Elements/EastComboBoxElement.qml</file>
+        <file>Elements/EastComboBoxStyle.qml</file>
     </qresource>
 </RCC>

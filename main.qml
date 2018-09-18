@@ -72,8 +72,12 @@ ApplicationWindow {
     //        anchors.centerIn: parent
     //    }
 
+    //    EastSupportComponentWindow {
+    //        anchors.fill: parent
+    //    }
+
     //TODO тут!!!
-    EastSupportComponentWindow {
+    EastCallbackComponentWindow {
         anchors.fill: parent
     }
 }

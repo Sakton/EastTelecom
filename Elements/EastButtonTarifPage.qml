@@ -3,9 +3,11 @@ import QtQuick 2.0
 Rectangle {
     id: rctg
     property string textButton: "ПЕРЕЙТИ"
+    property color colorButton: "#607f7f7f"
+    property color colorButtonHover: "#60696868"
     width: 250
     height: 50
-    color: "#607f7f7f"
+    color: colorButton
     border.width: 1
     border.color: "black"
     Text {
@@ -18,10 +20,10 @@ Rectangle {
     MouseArea {
         anchors.fill: parent
         onPressed: {
-            rctg.color = "#60696868"
+            rctg.color = colorButtonHover
         }
         onReleased: {
-            rctg.color = "#607f7f7f"
+            rctg.color = colorButton
         }
     }
 }
