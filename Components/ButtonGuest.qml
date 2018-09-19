@@ -6,7 +6,7 @@ Button {
     width: 480
     height: 80
     EastTextElement {
-        text: "Забыл пароль / ГОСТЬ"
+        text: "Забыл пароль"
         font.pixelSize: parent.height / 2
     }
     style: StyleButton {

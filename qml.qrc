@@ -47,5 +47,6 @@
         <file>Elements/EastComboBoxListModel.qml</file>
         <file>Elements/EastComboBoxDelegate.qml</file>
         <file>Elements/EastTextInputElement.qml</file>
+        <file>Pages/EastRecoverPasswordPage.qml</file>
     </qresource>
 </RCC>

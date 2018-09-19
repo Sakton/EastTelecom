@@ -3,13 +3,14 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 TextField {
+    property string textesPlaceholder: "Йоур секонд нумбер"
     implicitWidth: 320
     implicitHeight: 80
     width: implicitWidth
     height: implicitHeight
     anchors.fill: parent
     font.pixelSize: 18
-    placeholderText: "Йоур секонд нумбер"
+    placeholderText: textesPlaceholder
     style: EastTextFieldStyle {
     }
 }

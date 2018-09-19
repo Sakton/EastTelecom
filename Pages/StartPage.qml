@@ -8,6 +8,7 @@ Item {
     id: startPg
     width: 480
     height: 700
+
     Column {
         spacing: parent.width / 7
         anchors.centerIn: parent

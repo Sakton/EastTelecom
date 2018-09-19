@@ -76,8 +76,12 @@ ApplicationWindow {
     //        anchors.fill: parent
     //    }
 
+    //    EastCallbackComponentWindow {
+    //        anchors.fill: parent
+    //    }
+
     //TODO тут!!!
-    EastCallbackComponentWindow {
+    EastRecoverPasswordPage {
         anchors.fill: parent
     }
 }
