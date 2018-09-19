@@ -44,5 +44,8 @@
         <file>Components/EastCallbackComponentWindow.qml</file>
         <file>Elements/EastComboBoxElement.qml</file>
         <file>Elements/EastComboBoxStyle.qml</file>
+        <file>Elements/EastComboBoxListModel.qml</file>
+        <file>Elements/EastComboBoxDelegate.qml</file>
+        <file>Elements/EastTextInputElement.qml</file>
     </qresource>
 </RCC>

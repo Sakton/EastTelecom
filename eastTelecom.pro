@@ -31,4 +31,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     Elements/EastConfirmChangeTariffButtonBlock.qml \
-    Elements/EastConfirmChangeTariffButtonBlock.qml
+    Elements/EastConfirmChangeTariffButtonBlock.qml \
+    Elements/EastComboBoxListModel.qml \
+    Elements/EastComboBoxDelegate.qml
