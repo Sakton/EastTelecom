@@ -16,15 +16,12 @@ Item {
                 drawerBoxLoader.setSource("qrc:/Components/EastDrawerBox.qml", {
                                               "z": 5,
                                               "y": menuButton.height,
-                                              "visible": true,
-                                              "position": 1
+                                              "visible": true
                                           })
             else if (drawerBoxLoader.item.visible) {
                 drawerBoxLoader.item.visible = false
-                drawerBoxLoader.item.position = 0
             } else {
                 drawerBoxLoader.item.visible = true
-                drawerBoxLoader.item.position = 1
             }
         }
     }
