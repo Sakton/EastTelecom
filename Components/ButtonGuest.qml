@@ -6,6 +6,7 @@ Button {
     width: 480
     height: 80
     EastTextElement {
+        anchors.fill: parent
         text: "Забыл пароль"
         font.pixelSize: parent.height / 2
     }
