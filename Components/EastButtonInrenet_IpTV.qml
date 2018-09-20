@@ -4,8 +4,10 @@ import "../Elements"
 
 Rectangle {
     id: root
-    width: 380
-    height: 25
+    implicitWidth: 380
+    implicitHeight: 30
+    width: implicitWidth
+    height: implicitHeight
     signal typeClickedButtonInfo(string typeButtonClicked)
 
     RowLayout {

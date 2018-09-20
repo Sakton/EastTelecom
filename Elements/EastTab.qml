@@ -73,7 +73,7 @@ Tab {
         Loader {
             id: blockButtonsInternetIpTv
             width: parent.width
-            height: parent.height / 14
+            height: parent.height / 10
             y: tab.height - height
             z: 1
             Component.onCompleted: {
