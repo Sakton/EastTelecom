@@ -22,6 +22,7 @@ Tab {
                 if (typeInfo == 0)
                     setSource("qrc:/Components/EastPoleInternetIpTv.qml")
             }
+
             Connections {
                 target: blockButtonsInternetIpTv.item
                 onTypeClickedButtonInfo: {
@@ -50,6 +51,7 @@ Tab {
                               "typeInfo": tab.typeInfo
                           })
             }
+
             Connections {
                 target: blockButtonsInternetIpTv.item
                 onTypeClickedButtonInfo: {

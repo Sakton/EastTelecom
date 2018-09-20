@@ -9,7 +9,8 @@ TabView {
     height: 533
     property int typeInfo: 0
     property int screenHeight: 580
-    frameVisible: false
+    frameVisible: true
+    clip: true
 
     style: EastTabViewStyle {
         width: parent.width

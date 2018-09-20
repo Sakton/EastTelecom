@@ -4,8 +4,12 @@ import "../Elements"
 
 Rectangle {
     id: r
-    width: 320
-    height: 64
+    signal clickedEastButtonMenu
+    implicitWidth: 320
+    implicitHeight: 64
+    width: implicitWidth
+    height: implicitHeight
+
     RowLayout {
         anchors.fill: parent
         spacing: 0
@@ -24,12 +28,13 @@ Rectangle {
                 anchors.fill: parent
                 onClicked: {
                     console.debug("EastMenuButton only icon menu")
+                    clickedEastButtonMenu()
                 }
             }
         }
 
         Rectangle {
-            color: "#696868"
+            color: "black"
             Layout.fillWidth: true
             Layout.maximumWidth: 1
             height: parent.height
@@ -52,6 +57,7 @@ Rectangle {
         Rectangle {
             Layout.fillWidth: true
             height: parent.height
+            anchors.margins: 1
 
             ColumnLayout {
                 anchors.fill: parent
@@ -85,6 +91,13 @@ Rectangle {
                     }
                 }
             }
+
+            Rectangle {
+                width: parent.width
+                height: 1
+                y: parent.height
+                color: "#696868"
+            }
         }
     }
 
@@ -92,6 +105,6 @@ Rectangle {
         width: parent.width
         height: 1
         y: parent.height
-        color: "#696868"
+        color: "black"
     }
 }

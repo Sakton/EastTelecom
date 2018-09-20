@@ -3,10 +3,13 @@ import "../Elements"
 
 Rectangle {
     property string txt: "INTERNET"
-    width: parent.width
-    height: parent.height / 10
-    color: "red"
+    implicitWidth: 320
+    implicitHeight: 30
+    width: implicitWidth
+    height: implicitHeight
+    color: "#7f7f7f"
     z: 1
+
     EastTextElement {
         anchors.centerIn: parent
         text: parent.txt
