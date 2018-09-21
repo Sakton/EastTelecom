@@ -84,7 +84,6 @@ Rectangle {
                 //WARNING empty item, not delete
                 Layout.minimumWidth: parent.width
                 Layout.minimumHeight: parent.height / 16
-                //WARNING empty item, not delete
             }
         }
     }
