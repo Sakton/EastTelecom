@@ -23,20 +23,24 @@ Item {
     Connections {
         target: drawerBox
         onSignalNameMenuItemDrawer: {
-            console.debug(nameItem)
 
             switch (nameItem) {
             case "Информация":
-
-                contentLoader.setSource("qrc:/Components/EastTabView.qml")
+                contentLoader.setSource("qrc:/Components/EastTabView.qml", {
+                                            "currentIndex": 0
+                                        })
                 menuVisible()
                 break
             case "Управление":
-                contentLoader.setSource("qrc:/Components/EastTabView.qml")
+                contentLoader.setSource("qrc:/Components/EastTabView.qml", {
+                                            "currentIndex": 1
+                                        })
                 menuVisible()
                 break
             case "Тарифы":
-                contentLoader.setSource("qrc:/Components/EastSwipeView.qml")
+                contentLoader.setSource("qrc:/Components/EastSwipeView.qml", {
+                                            "countTarifs": 4 //BUG magic number
+                                        })
                 menuVisible()
                 break
             case "Служба поддержки":

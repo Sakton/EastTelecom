@@ -3,8 +3,12 @@ import QtQuick.Controls 2.4
 import "../Elements"
 
 Item {
-    width: 320
-    height: 580
+    implicitWidth: 320
+    implicitHeight: 580
+    width: implicitWidth
+    height: implicitHeight
+    property int countTarifs: 3
+
     SwipeView {
         id: view
         currentIndex: 0
@@ -13,19 +17,10 @@ Item {
 
         Repeater {
             id: rep
-            model: 3
+            model: countTarifs
 
-            EastItemSwipeView {
-                clr: {
-                    switch (index) {
-                    case 0:
-                        return "red"
-                    case 1:
-                        return "blue"
-                    case 2:
-                        return "green"
-                    }
-                }
+            EastTarifElementPage {
+                indexItem: view.currentIndex
             }
         }
     }

@@ -4,9 +4,11 @@ import QtQuick.Layouts 1.3
 import "../Elements"
 
 Rectangle {
-    width: 320
-    height: 580
-    property int indexItem: 3
+    implicitWidth: 320
+    implicitHeight: 580
+    width: implicitWidth
+    height: implicitHeight
+    property int indexItem: 0
     property string textTarifName: "ТАРИФ"
     property string textItem: "bla bla bla"
 
@@ -48,8 +50,11 @@ Rectangle {
             }
 
             Item {
-                Layout.minimumWidth: parent.width
-                Layout.minimumHeight: parent.height / 2
+
+                //                Layout.minimumWidth: parent.width
+                //                Layout.maximumHeight: parent.height / 2
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 Text {
                     anchors.fill: parent
@@ -73,6 +78,13 @@ Rectangle {
                     anchors.leftMargin: 30
                     anchors.rightMargin: 30
                 }
+            }
+
+            Item {
+                //WARNING empty item, not delete
+                Layout.minimumWidth: parent.width
+                Layout.minimumHeight: parent.height / 16
+                //WARNING empty item, not delete
             }
         }
     }
