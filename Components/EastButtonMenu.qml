@@ -27,7 +27,6 @@ Rectangle {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    console.debug("EastMenuButton only icon menu")
                     clickedEastButtonMenu()
                 }
             }

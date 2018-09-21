@@ -4,6 +4,8 @@ import "../Elements"
 
 Drawer {
     property int heightItem: 64
+    signal signalNameMenuItemDrawer(string nameItem)
+
     width: 300
     height: (eastListMenuView.count + 1) * heightItem
     position: 0
@@ -13,7 +15,13 @@ Drawer {
         color: "#403f3f"
     }
 
-    //    dragMargin: 0
+    Connections {
+        target: eastListMenuView
+        onSignalNameMenuItemListWiew: {
+            signalNameMenuItemDrawer(nameItem)
+        }
+    }
+
     EastMenuListView {
         id: eastListMenuView
         anchors.fill: parent
