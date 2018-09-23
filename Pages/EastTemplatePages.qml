@@ -20,13 +20,14 @@ Item {
         }
     }
 
-    //TODO туту!
     Connections {
+        ignoreUnknownSignals: true
+        enabled: (contentLoader.source == "qrc:/Components/EastTabView.qml") ? true : false
+
         target: {
             contentLoader.item
         }
         onSignalTabContetntClicked: {
-            console.debug(tab)
             menuButton.textOne = tab
         }
     }

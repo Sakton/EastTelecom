@@ -13,6 +13,7 @@ TabView {
     implicitHeight: 580
     width: implicitWidth
     height: implicitHeight
+    currentIndex: 0
 
     frameVisible: true
     clip: true
@@ -23,19 +24,30 @@ TabView {
     }
 
     onCurrentIndexChanged: {
-        console.debug(tw.getTab(currentIndex).title)
-        signalTabContetntClicked(tw.getTab(currentIndex).title)
+        if ((tab1.status === Component.Ready)
+                && (tab2.status === Component.Ready))
+            signalTabContetntClicked(getTab(currentIndex).title)
     }
 
     EastTab {
+        id: tab1
         typeInfo: 0
         title: "ИНФО"
         colorr: "#403f3f"
+
+        Component.onCompleted: {
+            signalTabContetntClicked(title)
+        }
     }
 
     EastTab {
+        id: tab2
         typeInfo: 1
         title: "УПРАВЛЕНИЕ"
         colorr: "#403f3f"
+
+        Component.onCompleted: {
+            signalTabContetntClicked(title)
+        }
     }
 }

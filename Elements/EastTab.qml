@@ -39,6 +39,7 @@ Tab {
                 else
                     parent.height
             }
+
             y: {
                 if (typeInfo == 0)
                     return internetIptvPole.height
