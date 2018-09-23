@@ -23,6 +23,7 @@ TabView {
     }
 
     onCurrentIndexChanged: {
+        console.debug(tw.getTab(currentIndex).title)
         signalTabContetntClicked(tw.getTab(currentIndex).title)
     }
 

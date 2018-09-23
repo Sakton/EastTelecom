@@ -21,16 +21,13 @@ Item {
     }
 
     //TODO туту!
-    Component {
-        id: connectionsTab
-        Connections {
-            target: {
-                if (contentLoader.source == "qrc:/Components/EastTabView.qml")
-                    contentLoader.item
-            }
-            onSignalTabContetntClicked: {
-                menuButton.textOne = tab
-            }
+    Connections {
+        target: {
+            contentLoader.item
+        }
+        onSignalTabContetntClicked: {
+            console.debug(tab)
+            menuButton.textOne = tab
         }
     }
 
