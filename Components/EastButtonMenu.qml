@@ -5,6 +5,8 @@ import "../Elements"
 Rectangle {
     id: r
     signal clickedEastButtonMenu
+    property string textOne: "Личный"
+    property string textTwo: "Кабинет"
     implicitWidth: 320
     implicitHeight: 64
     width: implicitWidth
@@ -65,30 +67,34 @@ Rectangle {
                 Rectangle {
                     color: "#403f3f"
                     Layout.fillHeight: true
-                    Layout.minimumWidth: parent.width
-                    Layout.minimumHeight: r.height / 2
+                    Layout.fillWidth: true
 
+                    //                    Layout.minimumWidth: parent.width
+                    //                    Layout.minimumHeight: r.height / 2
                     Text {
                         anchors.left: parent.left
                         anchors.verticalCenter: parent.verticalCenter
-                        font.pixelSize: parent.height / 1.5
-                        text: "Личный"
+                        //                        font.pixelSize: parent.height / 1.5
+                        font.pixelSize: parent.height / 3
+                        text: textOne
+                        color: "white"
                     }
                 }
 
-                Rectangle {
-                    color: "#403f3f"
-                    Layout.fillHeight: true
-                    Layout.minimumWidth: parent.width
-                    Layout.minimumHeight: r.height / 2
+                //                Rectangle {
+                //                    color: "#403f3f"
+                //                    Layout.fillHeight: true
+                //                    Layout.minimumWidth: parent.width
+                //                    Layout.minimumHeight: r.height / 2
 
-                    Text {
-                        anchors.left: parent.left
-                        anchors.verticalCenter: parent.verticalCenter
-                        font.pixelSize: parent.height / 1.5
-                        text: "Кабинет"
-                    }
-                }
+                //                    Text {
+                //                        anchors.left: parent.left
+                //                        anchors.verticalCenter: parent.verticalCenter
+                //                        font.pixelSize: parent.height / 1.5
+                //                        text: textTwo
+                //                        color: "white"
+                //                    }
+                //                }
             }
 
             Rectangle {

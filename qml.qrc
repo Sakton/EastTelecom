@@ -30,7 +30,6 @@
         <file>Elements/EastHeaderMenu.qml</file>
         <file>Components/EastButtonMenu.qml</file>
         <file>Components/EastSwipeView.qml</file>
-        <file>Elements/EastItemSwipeView.qml</file>
         <file>Elements/EastDelegatePageIndicator.qml</file>
         <file>Elements/EastPageIndicatorSwipeView.qml</file>
         <file>Elements/EastTarifElementPage.qml</file>

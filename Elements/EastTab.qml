@@ -4,11 +4,10 @@ import "../Components"
 
 Tab {
     id: tab
-
     property color colorr: "#403f3f"
     property int typeInfo: 0
-    signal signalTypeInfo(int typeInfo)
 
+    //    signal signalTypeInfo(string typeInfo)
     Rectangle {
         anchors.fill: parent
         color: parent.colorr
@@ -46,6 +45,7 @@ Tab {
                 else
                     return 0
             }
+
             Component.onCompleted: {
                 setSource("qrc:/Elements/EastListView.qml", {
                               "typeInfo": tab.typeInfo

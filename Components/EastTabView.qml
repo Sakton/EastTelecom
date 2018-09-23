@@ -5,16 +5,25 @@ import "../Elements"
 
 TabView {
     id: tw
-    width: 320
-    height: 533
+    signal signalTabContetntClicked(string tab)
     property int typeInfo: 0
     property int screenHeight: 580
+
+    implicitWidth: 320
+    implicitHeight: 580
+    width: implicitWidth
+    height: implicitHeight
+
     frameVisible: true
     clip: true
 
     style: EastTabViewStyle {
         width: parent.width
         height: parent.height / 10
+    }
+
+    onCurrentIndexChanged: {
+        signalTabContetntClicked(tw.getTab(currentIndex).title)
     }
 
     EastTab {

@@ -20,10 +20,24 @@ Item {
         }
     }
 
+    //TODO туту!
+    Component {
+        id: connectionsTab
+        Connections {
+            target: {
+                if (contentLoader.source == "qrc:/Components/EastTabView.qml")
+                    contentLoader.item
+            }
+            onSignalTabContetntClicked: {
+                menuButton.textOne = tab
+            }
+        }
+    }
+
     Connections {
         target: drawerBox
         onSignalNameMenuItemDrawer: {
-
+            menuButton.textOne = nameItem
             switch (nameItem) {
             case "Информация":
                 contentLoader.setSource("qrc:/Components/EastTabView.qml", {
