@@ -125,9 +125,6 @@ Rectangle {
                 imgRect.color = "black"
                 callbackWindow.visible = true
                 rootItem.opacity = 0.5
-                //                firstRect.border.color = "red"
-                //                secondRect.border.color = "red"
-                //                imgRect.border.color = "red"
                 break
             }
         }
@@ -140,9 +137,6 @@ Rectangle {
                 imgRect.color = "#696868"
                 callbackWindow.visible = false
                 rootItem.opacity = 1
-                //                firstRect.border.color = "gray"
-                //                secondRect.border.color = "gray"
-                //                imgRect.border.color = "gray"
                 break
             }
         }
