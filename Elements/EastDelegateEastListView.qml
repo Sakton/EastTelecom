@@ -123,8 +123,6 @@ Rectangle {
                 firstRect.color = "black"
                 secondRect.color = "black"
                 imgRect.color = "black"
-                callbackWindow.visible = true
-                rootItem.opacity = 0.5
                 break
             }
         }
@@ -135,8 +133,6 @@ Rectangle {
                 firstRect.color = "#696868"
                 secondRect.color = "#696868"
                 imgRect.color = "#696868"
-                callbackWindow.visible = false
-                rootItem.opacity = 1
                 break
             }
         }
