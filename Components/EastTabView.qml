@@ -6,6 +6,7 @@ import "../Elements"
 TabView {
     id: tw
     signal signalTabContetntClicked(string tab)
+    signal signalCallCurrentTariffWindowTabView(string tarifName)
     property int typeInfo: 0
     property int screenHeight: 580
 
@@ -31,7 +32,7 @@ TabView {
 
     EastTab {
         id: tab1
-        typeInfo: 0
+        typeInfoTab: 0
         title: "ИНФО"
         colorr: "#403f3f"
 
@@ -42,12 +43,14 @@ TabView {
 
     EastTab {
         id: tab2
-        typeInfo: 1
+        typeInfoTab: 1
         title: "УПРАВЛЕНИЕ"
         colorr: "#403f3f"
 
         Component.onCompleted: {
             signalTabContetntClicked(title)
+            signalCallCurrentTariffWindowTab.connect(
+                        tw.signalCallCurrentTariffWindowTabView)
         }
     }
 }

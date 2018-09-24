@@ -20,7 +20,18 @@ ListModel {
 
     //    property var valuesMenu:
     Component.onCompleted: {
-        switch (typeInfo) {
+        eastModel.clear()
+        //BUG откуда еще одна установка ???
+        vybor(typeInfo)
+    }
+
+    onTypeInfoChanged: {
+        eastModel.clear()
+        vybor(typeInfo)
+    }
+
+    function vybor(tInfo) {
+        switch (tInfo) {
         case 0:
             addItemModel(names0, values0, thematicImages0)
             break

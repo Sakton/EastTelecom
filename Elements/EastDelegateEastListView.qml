@@ -111,8 +111,7 @@ Rectangle {
         onClicked: {
             switch (model.name) {
             case "Текущий тариф:":
-                console.debug(model.name)
-                signalCallCurrentTariffWindow(model.name)
+                signalCallCurrentTariffWindow(model.value)
                 break
             }
         }

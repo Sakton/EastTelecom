@@ -33,19 +33,28 @@ Item {
     }
 
     Connections {
+        ignoreUnknownSignals: true
+        target: contentLoader.item
+        enabled: (contentLoader.source == "qrc:/Components/EastTabView.qml") ? true : false
+        onSignalCallCurrentTariffWindowTabView: {
+            console.debug(tarifName)
+        }
+    }
+
+    Connections {
         target: drawerBox
         onSignalNameMenuItemDrawer: {
             menuButton.textOne = nameItem
             switch (nameItem) {
             case "Информация":
                 contentLoader.setSource("qrc:/Components/EastTabView.qml", {
-                                            "currentIndex": 0
+                                            "currentIndex": 0 //BUG magic number
                                         })
                 menuVisible()
                 break
             case "Управление":
                 contentLoader.setSource("qrc:/Components/EastTabView.qml", {
-                                            "currentIndex": 1
+                                            "currentIndex": 1 //BUG magic number
                                         })
                 menuVisible()
                 break
@@ -73,6 +82,8 @@ Item {
         }
     }
 
+
+    //TODO остановился тут работа с диалогом
     ColumnLayout {
         anchors.fill: parent
         spacing: 1
