@@ -67,7 +67,7 @@ Tab {
     //                    } else if (typeButtonClicked === "IP TV") {
     //                        tabViewLoader.setSource(
     //                                    "qrc:/Elements/EastListView.qml", {
-    //                                        "typeInfo": 2 //TODO магическое число, подумать... Тип данных в модель
+    //                                        "typeInfo": 2
     //                                    })
     //                    }
     //                }

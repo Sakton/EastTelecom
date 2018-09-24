@@ -13,6 +13,36 @@ Rectangle {
     color: "#607f7f7f"
     border.color: "black"
 
+    function setBtn(typeInf) {
+        switch (typeInf) {
+        case 0:
+            btnLoader.setSource("")
+            break
+        case 1:
+            btnLoader.setSource("qrc:/Elements/EastButtonTarifPage.qml", {
+                                    "textButton": "ПЕРЕЙТИ"
+                                })
+            break
+        case 2:
+            btnLoader.setSource("qrc:/Elements/EastButtonTarifPage.qml", {
+                                    "textButton": "СЛУЖБА ПОДДЕРЖКИ"
+                                })
+            break
+        case 3:
+            btnLoader.setSource(
+                        "qrc:/Elements/EastConfirmChangeTariffButtonBlock.qml")
+            break
+        default:
+            btnLoader.setSource("")
+        }
+    }
+
+    onTypeInfoWindowChanged: {
+        if (btnLoader.status == Component.Ready) {
+            setBtn(typeInfoWindow)
+        }
+    }
+
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
@@ -45,27 +75,10 @@ Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Loader {
+                id: btnLoader
                 anchors.fill: parent
                 Component.onCompleted: {
-                    console.debug(root.typeInfoWindow)
-                    switch (root.typeInfoWindow) {
-                    case 0:
-                        setSource("qrc:/Elements/EastButtonTarifPage.qml", {
-                                      "textButton": "ПЕРЕЙТИ"
-                                  })
-                        break
-                    case 1:
-                        setSource("qrc:/Elements/EastConfirmChangeTariffButtonBlock.qml")
-                        break
-                    case 2:
-                        setSource("qrc:/Elements/EastButtonTarifPage.qml", {
-                                      "textButton": "СЛУЖБА ПОДДЕРЖКИ"
-                                  })
-                        break
-                    case 3:
-                        setSource("")
-                        break
-                    }
+                    setBtn(root.typeInfoWindow)
                 }
             }
         }

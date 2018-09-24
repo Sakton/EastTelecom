@@ -48,5 +48,6 @@
         <file>Elements/EastTextInputElement.qml</file>
         <file>Pages/EastRecoverPasswordPage.qml</file>
         <file>Pages/EastTemplatePages.qml</file>
+        <file>Components/EastPopupWindow.qml</file>
     </qresource>
 </RCC>
