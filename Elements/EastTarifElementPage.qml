@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.4
 import QtQuick.Layouts 1.3
 import "../Elements"
+import "../Components"
 
 Rectangle {
     implicitWidth: 320
@@ -31,6 +32,30 @@ Rectangle {
             }
         }
 
+        EastPopupWindow {
+            id: pup
+            width: parent.width * .8
+            height: parent.height * .8
+            x: (parent.width - width) / 2
+            y: (parent.height - height) / 2
+            typeWindow: 3
+
+            onSignalAnswerTariffButtonBlockPopupWindow: {
+                if (answer)
+                    pupInfo.open()
+                pup.close()
+            }
+        }
+
+        EastPopupWindow {
+            id: pupInfo
+            width: parent.width * .8
+            height: parent.height * .8
+            x: (parent.width - width) / 2
+            y: (parent.height - height) / 2
+            typeWindow: 0
+        }
+
         ColumnLayout {
             anchors.fill: parent
             spacing: 5
@@ -50,9 +75,6 @@ Rectangle {
             }
 
             Item {
-
-                //                Layout.minimumWidth: parent.width
-                //                Layout.maximumHeight: parent.height / 2
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
@@ -77,6 +99,11 @@ Rectangle {
                     anchors.fill: parent
                     anchors.leftMargin: 30
                     anchors.rightMargin: 30
+
+                    onClicked: {
+                        pup.typeWindow = 2
+                        pup.open()
+                    }
                 }
             }
 

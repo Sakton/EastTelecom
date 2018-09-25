@@ -3,8 +3,12 @@ import QtQuick.Layouts 1.3
 import "../Elements"
 
 Rectangle {
-    width: 320
-    height: 580
+    signal signalClickedBtnPhoneElementSupportComponentWindow
+
+    implicitWidth: 320
+    implicitHeight: 580
+    width: implicitWidth
+    height: implicitHeight
     color: "#7f7f7f"
 
     ColumnLayout {
@@ -33,6 +37,10 @@ Rectangle {
                 EastBtnPhoneElement {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
+
+                    onSignalClickedBtnPhoneElement: {
+                        signalClickedBtnPhoneElementSupportComponentWindow()
+                    }
                 }
             }
         }

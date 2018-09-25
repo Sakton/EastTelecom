@@ -3,6 +3,8 @@ import QtQuick.Layouts 1.3
 
 Rectangle {
     id: root
+    signal signalAnswerTariffButtonBlockPopupWinInfo(bool answer)
+
     property int typeInfoWindow: 0
     property string textTitle: "textTitle"
     property string textDescription: "textDescription <b>textDescription</b> <i>textDescription</i> <b><i>textDescription</i></b>"
@@ -19,6 +21,7 @@ Rectangle {
             btnLoader.setSource("")
             break
         case 1:
+            //TODO пока убрал с карты приложения
             btnLoader.setSource("qrc:/Elements/EastButtonTarifPage.qml", {
                                     "textButton": "ПЕРЕЙТИ"
                                 })
@@ -37,12 +40,6 @@ Rectangle {
         }
     }
 
-    onTypeInfoWindowChanged: {
-        if (btnLoader.status == Component.Ready) {
-            setBtn(typeInfoWindow)
-        }
-    }
-
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
@@ -51,6 +48,7 @@ Rectangle {
             Layout.maximumHeight: parent.height / 8
             Layout.fillHeight: true
             Layout.fillWidth: true
+
             EastTextElement {
                 anchors.fill: parent
                 color: "white"
@@ -62,6 +60,7 @@ Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
             Layout.maximumHeight: parent.height * 3 / 4
+
             EastTextElement {
                 anchors.fill: parent
                 anchors.margins: 5
@@ -74,11 +73,15 @@ Rectangle {
             Layout.maximumHeight: parent.height / 8
             Layout.fillHeight: true
             Layout.fillWidth: true
+
             Loader {
                 id: btnLoader
                 anchors.fill: parent
                 Component.onCompleted: {
                     setBtn(root.typeInfoWindow)
+                    if (root.typeInfoWindow === 3)
+                        btnLoader.item.signalAnswerTariffButtonBlock.connect(
+                                    root.signalAnswerTariffButtonBlockPopupWinInfo)
                 }
             }
         }

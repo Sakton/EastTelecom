@@ -4,6 +4,8 @@ import "../Elements"
 
 Popup {
     id: pup
+    signal signalAnswerTariffButtonBlockPopupWindow(bool answer)
+
     property int typeWindow: 0
 
     visible: false
@@ -17,10 +19,6 @@ Popup {
     opacity: 0.9
     padding: 0
 
-
-    //    onTypeWindowChanged: {
-    //        eastPup.typeInfoWindow = typeWindow
-    //    }
     background: Rectangle {
         color: "black"
     }
@@ -30,6 +28,12 @@ Popup {
         width: pup.width
         height: pup.height
         typeInfoWindow: typeWindow
+
+        Component.onCompleted: {
+            if (typeWindow === 3)
+                signalAnswerTariffButtonBlockPopupWinInfo.connect(
+                            pup.signalAnswerTariffButtonBlockPopupWindow)
+        }
     }
 
     onClosed: {

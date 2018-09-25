@@ -24,13 +24,8 @@ Item {
     Connections {
         ignoreUnknownSignals: true
         enabled: (contentLoader.source == "qrc:/Components/EastTabView.qml") ? true : false
-
-        target: {
-            contentLoader.item
-        }
-        onSignalTabContetntClicked: {
-            menuButton.textOne = tab
-        }
+        target: contentLoader.item
+        onSignalTabContetntClicked: menuButton.textOne = tab
     }
 
     Connections {
@@ -38,12 +33,8 @@ Item {
         target: contentLoader.item
         enabled: (contentLoader.source == "qrc:/Components/EastTabView.qml") ? true : false
         onSignalCallCurrentTariffWindowTabView: {
-            console.debug(tarifName)
-            //            pup.setSource("qrc:/Components/EastPopupWindow.qml", {
-            //                              "typeWindow": 0
-            //                          })
-            //            pup.item.visible = true
-            //           pup.visible = true
+            //            console.debug(tarifName)
+            pup.typeWindow = 0
             pup.open()
         }
     }
@@ -89,13 +80,25 @@ Item {
         }
     }
 
+    Connections {
+        ignoreUnknownSignals: true
+        target: contentLoader.item
+        enabled: (contentLoader.source
+                  == "qrc:/Components/EastSupportComponentWindow.qml") ? true : false
+
+        onSignalClickedBtnPhoneElementSupportComponentWindow: {
+            contentLoader.setSource(
+                        "qrc:/Components/EastCallbackComponentWindow.qml")
+        }
+    }
+
     EastPopupWindow {
         id: pup
         width: parent.width * .8
         height: parent.height * .8
         x: (parent.width - width) / 2
         y: (parent.height - height) / 2
-        typeWindow: 2
+        typeWindow: 0
     }
 
     ColumnLayout {

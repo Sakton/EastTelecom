@@ -2,8 +2,11 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.3
 
 Item {
-    width: 250
-    height: 50
+    implicitWidth: 250
+    implicitHeight: 50
+    width: implicitWidth
+    height: implicitHeight
+    signal signalAnswerTariffButtonBlock(bool answer)
 
     RowLayout {
         anchors.fill: parent
@@ -20,11 +23,15 @@ Item {
 
             EastTextElement {
                 anchors.centerIn: parent
-                text: "OK"
+                text: "ДА"
             }
 
             MouseArea {
                 anchors.fill: parent
+                onClicked: {
+                    signalAnswerTariffButtonBlock(true)
+                }
+
                 onPressed: {
                     btnOk.color = "#7f7f7f"
                 }
@@ -46,11 +53,15 @@ Item {
 
             EastTextElement {
                 anchors.centerIn: parent
-                text: "NO"
+                text: "НЕТ"
             }
 
             MouseArea {
                 anchors.fill: parent
+                onClicked: {
+                    signalAnswerTariffButtonBlock(false)
+                }
+
                 onPressed: {
                     btnNo.color = "#7f7f7f"
                 }

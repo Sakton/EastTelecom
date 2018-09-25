@@ -1,8 +1,12 @@
 import QtQuick 2.0
 
 Item {
-    width: 100
-    height: 100
+    signal signalClickedBtnPhoneElement
+
+    implicitWidth: 100
+    implicitHeight: 100
+    width: implicitWidth
+    height: implicitHeight
 
     Image {
         anchors.fill: parent
@@ -14,6 +18,7 @@ Item {
 
         onClicked: {
             console.debug("Click phone")
+            signalClickedBtnPhoneElement()
         }
     }
 }

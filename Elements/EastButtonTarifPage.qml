@@ -2,6 +2,7 @@ import QtQuick 2.0
 
 Rectangle {
     id: rctg
+    signal clicked
     property string textButton: "ПЕРЕЙТИ"
     property color colorButton: "#607f7f7f"
     property color colorButtonHover: "#60696868"
@@ -13,12 +14,16 @@ Rectangle {
     Text {
         text: textButton
         anchors.centerIn: parent
-        font.pixelSize: parent.height / 2.2
+        font.pixelSize: parent.height / 2.5
         font.family: "Helvetica"
     }
 
     MouseArea {
         anchors.fill: parent
+        onClicked: {
+            rctg.clicked()
+        }
+
         onPressed: {
             rctg.color = colorButtonHover
         }
