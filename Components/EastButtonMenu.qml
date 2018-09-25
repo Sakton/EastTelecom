@@ -11,15 +11,19 @@ Rectangle {
     implicitHeight: 64
     width: implicitWidth
     height: implicitHeight
+    border.width: 1
+    border.color: "black"
 
     RowLayout {
         anchors.fill: parent
+        anchors.margins: 1
         spacing: 0
+
         Rectangle {
             color: "#403f3f"
             Layout.fillWidth: true
             Layout.maximumWidth: r.height
-            height: parent.height
+            Layout.fillHeight: true
 
             Image {
                 anchors.fill: parent
@@ -57,9 +61,10 @@ Rectangle {
 
         Rectangle {
             Layout.fillWidth: true
-            height: parent.height
+            Layout.fillHeight: true
             anchors.margins: 1
 
+            //            height: parent.height
             ColumnLayout {
                 anchors.fill: parent
                 spacing: 0

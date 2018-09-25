@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.4
-import "../Elements"
 
 Popup {
     id: pup
@@ -9,7 +8,7 @@ Popup {
 
     visible: false
     implicitWidth: 300
-    implicitHeight: 560
+    implicitHeight: 300
     width: implicitWidth
     height: implicitHeight
     contentWidth: width
@@ -22,20 +21,8 @@ Popup {
         color: "black"
     }
 
-    contentItem: EastPopupWindowInfo {
-        id: eastPup
+    contentItem: EastStatusContentItem {
         width: pup.width
         height: pup.height
-        typeInfoWindow: typeWindow
-
-        Component.onCompleted: {
-            if (typeWindow === 3)
-                signalAnswerTariffButtonBlockPopupWinInfo.connect(
-                            pup.signalAnswerTariffButtonBlockPopupWindow)
-        }
-    }
-
-    onClosed: {
-        console.debug("destroed popup")
     }
 }

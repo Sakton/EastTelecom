@@ -4,6 +4,7 @@ import "../Elements"
 
 Rectangle {
     signal signalClickedBtnPhoneElementSupportComponentWindow
+    signal signalSendMessage
 
     implicitWidth: 320
     implicitHeight: 580
@@ -59,6 +60,10 @@ Rectangle {
             colorButton: "#403f3f"
             colorButtonHover: "#696868"
             textButton: "ОТПРАВИТЬ"
+
+            onClicked: {
+                signalSendMessage()
+            }
         }
     }
 }

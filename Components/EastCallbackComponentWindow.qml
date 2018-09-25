@@ -5,6 +5,8 @@ import "../Elements"
 
 Item {
     id: root
+    signal signalSendCallMessage
+
     implicitWidth: 320
     implicitHeight: 580
     width: implicitWidth
@@ -182,6 +184,10 @@ Item {
                 anchors.fill: parent
                 anchors.margins: 20
                 textButton: "CALL ME"
+
+                onClicked: {
+                    signalSendCallMessage()
+                }
             }
         }
     }

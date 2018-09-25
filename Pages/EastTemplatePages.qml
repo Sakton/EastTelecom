@@ -90,6 +90,28 @@ Item {
             contentLoader.setSource(
                         "qrc:/Components/EastCallbackComponentWindow.qml")
         }
+
+        onSignalSendMessage: {
+            pupStatus.open()
+        }
+    }
+
+    Connections {
+        ignoreUnknownSignals: true
+        target: contentLoader.item
+        enabled: (contentLoader.source
+                  == "qrc:/Components/EastCallbackComponentWindow.qml") ? true : false
+        onSignalSendCallMessage: {
+            pupStatus.open()
+        }
+    }
+
+    EastPopupStatusWindow {
+        id: pupStatus
+        width: parent.width * .7
+        height: parent.height * .5
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
     }
 
     EastPopupWindow {
