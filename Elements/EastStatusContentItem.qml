@@ -15,7 +15,7 @@ Rectangle {
         Rectangle {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            color: "blue"
+            color: "#403f3f"
 
             EastTextElement {
                 anchors.fill: parent

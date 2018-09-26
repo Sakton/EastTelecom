@@ -30,13 +30,13 @@ Item {
                 EastTextElement {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-                    text: "Ниразу уважаемый"
+                    text: "Уважаемый"
                 }
 
                 EastTextElement {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-                    text: "Пупкидзэ Пупок Пупкидзовиеч"
+                    text: "Иванов Иван Иванович"
                 }
             }
         }
@@ -70,7 +70,7 @@ Item {
                         EastTextElement {
                             Layout.fillWidth: true
                             Layout.fillHeight: true
-                            text: "Йоур курент нумбер фон:"
+                            text: "Ваш номер:"
                         }
 
                         EastTextElement {
@@ -108,7 +108,7 @@ Item {
                     EastTextElement {
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        text: "Вхере кал?:"
+                        text: "Служба:"
                     }
 
                     EastComboBoxElement {
@@ -155,7 +155,7 @@ Item {
                             //                            color: "black"
                             EastTextElement {
                                 anchors.fill: parent
-                                text: "Анозер нумбер фон:"
+                                text: "Другой номер:"
                             }
                         }
 
@@ -183,7 +183,7 @@ Item {
             EastButtonTarifPage {
                 anchors.fill: parent
                 anchors.margins: 20
-                textButton: "CALL ME"
+                textButton: "ЗАКАЗАТЬ ЗВОНОК"
 
                 onClicked: {
                     signalSendCallMessage()

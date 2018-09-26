@@ -10,7 +10,6 @@ ItemDelegate {
         border.width: 1
         border.color: "black"
         color: "#696868"
-        //        radius: height / 2
     }
 
     contentItem: EastTextElement {

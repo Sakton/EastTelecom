@@ -5,6 +5,7 @@ import "../Elements"
 import "../Components"
 
 Rectangle {
+    signal signalSendRecowerPassword
     implicitWidth: 320
     implicitHeight: 580
     width: implicitWidth
@@ -31,7 +32,7 @@ Rectangle {
             EastTextInputElement {
                 anchors.fill: parent
                 anchors.margins: 10
-                textesPlaceholder: "ФИО"
+                textesPlaceholder: "Ваш Логин"
             }
         }
 
@@ -42,7 +43,7 @@ Rectangle {
             EastTextInputElement {
                 anchors.fill: parent
                 anchors.margins: 10
-                textesPlaceholder: "Номер мобильника"
+                textesPlaceholder: "Номер мобильного телефона"
             }
         }
 
@@ -55,6 +56,10 @@ Rectangle {
                 height: parent.height * 0.5
                 anchors.centerIn: parent
                 textButton: "Выслать"
+
+                onClicked: {
+                    signalSendRecowerPassword()
+                }
             }
         }
     }

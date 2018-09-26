@@ -38,50 +38,35 @@ ApplicationWindow {
         id: u
     }
 
-    //    StartPage {
-    //        anchors.fill: parent
-    //    }
-
-    //    EastTabView {
-    //        anchors.fill: parent
-    //    }
-
-    //    EastDrawerBox {
-    //    }
-
-    //    EastButtonMenu {
-    //        width: parent.width
-    //    }
-
-    //    EastSwipeView {
-    //        anchors.fill: parent
-    //    }
-
-    //    EastTarifElementPage {
-    //        anchors.fill: parent
-    //    }
-
-    //    EastPopupWindowInfo {
-    //        typeInfoWindow: 1
-    //        width: parent.width * 0.8
-    //        height: parent.height * 0.8
-    //        anchors.centerIn: parent
-    //    }
-
-    //    EastSupportComponentWindow {
-    //        anchors.fill: parent
-    //    }
-
-    //    EastCallbackComponentWindow {
-    //        anchors.fill: parent
-    //    }
-
-    //    EastRecoverPasswordPage {
-    //        anchors.fill: parent
-    //    }
-
-    //TODO тут
-    EastTemplatePages {
+    Loader {
+        id: mainLoad
         anchors.fill: parent
+
+        Component.onCompleted: {
+            setSource("qrc:/Pages/StartPage.qml")
+        }
+    }
+
+    Connections {
+        ignoreUnknownSignals: true
+        target: mainLoad.item
+        enabled: (mainLoad.source == "qrc:/Pages/StartPage.qml") ? true : false
+
+        onSignalConfirmLoginAndPass: {
+            mainLoad.setSource("qrc:/Pages/EastTemplatePages.qml")
+        }
+
+        onSignalClickButtonGuest: {
+            mainLoad.setSource("qrc:/Pages/EastRecoverPasswordPage.qml")
+        }
+    }
+
+    Connections {
+        ignoreUnknownSignals: true
+        target: mainLoad.item
+        enabled: (mainLoad.source == "qrc:/Pages/EastRecoverPasswordPage.qml")
+        onSignalSendRecowerPassword: {
+            mainLoad.setSource("qrc:/Pages/StartPage.qml")
+        }
     }
 }

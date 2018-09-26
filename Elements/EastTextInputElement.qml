@@ -3,7 +3,7 @@ import QtQuick.Controls 1.4
 import QtQuick.Controls.Styles 1.4
 
 TextField {
-    property string textesPlaceholder: "Йоур секонд нумбер"
+    property string textesPlaceholder: "Другой номер"
     implicitWidth: 320
     implicitHeight: 80
     width: implicitWidth

@@ -6,8 +6,13 @@ import "../Script.js" as Script
 
 Item {
     id: startPg
-    width: 480
-    height: 700
+    signal signalConfirmLoginAndPass
+    signal signalClickButtonGuest
+
+    implicitWidth: 320
+    implicitHeight: 580
+    width: implicitWidth
+    height: implicitHeight
 
     Column {
         spacing: parent.width / 7
@@ -29,12 +34,32 @@ Item {
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.myWidth * 0.75
             height: startPg.height / 9
+
+            onClicked: {
+                //TODO тут отправим данные на проверку
+                if (true)
+                    signalConfirmLoginAndPass()
+                else
+                    pupStatus.open()
+            }
         }
+    }
+
+    EastPopupStatusWindow {
+        id: pupStatus
+        width: parent.width * .7
+        height: parent.height * .5
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
     }
 
     ButtonGuest {
         y: parent.height - height
         width: startPg.width
         height: startPg.height / 12
+
+        onClicked: {
+            signalClickButtonGuest()
+        }
     }
 }

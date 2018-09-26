@@ -4,8 +4,8 @@ import QtQuick.Layouts 1.3
 Rectangle {
     id: r
     property color clr: "#403f3f"
-    property string txtOne: "Пупочоквадзе Васекл"
-    property string txtTwo: "Пупочоквадзевич"
+    property string txtOne: "Иванов Иван"
+    property string txtTwo: "Иванович"
     width: 320
     height: 64
     color: clr
