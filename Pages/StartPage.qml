@@ -26,6 +26,7 @@ Item {
         }
 
         LoginPassBlock {
+            id: logiPassBlock
             width: parent.myWidth
             height: startPg.height / 7
         }
@@ -36,11 +37,20 @@ Item {
             height: startPg.height / 9
 
             onClicked: {
+                console.debug(logiPassBlock.login)
+                var loginPassword = new Array
+                connector.slotFromQml(Script.loginPassword(logiPassBlock.login,
+                                                           logiPassBlock.pass,
+                                                           loginPassword))
+
+                console.debug(loginPassword)
+                delete loginPassword
+
                 //TODO тут отправим данные на проверку
-                if (true)
-                    signalConfirmLoginAndPass()
-                else
-                    pupStatus.open()
+                //                if (true)
+                //                    signalConfirmLoginAndPass()
+                //                else
+                //                    pupStatus.open()
             }
         }
     }
