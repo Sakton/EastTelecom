@@ -14,7 +14,7 @@ Rectangle {
         Rectangle {
             Layout.minimumWidth: size
             Layout.minimumHeight: size
-            color: "red"
+            color: "#403f3f"
             border.color: "black"
             border.width: 1
             Image {
@@ -27,7 +27,7 @@ Rectangle {
             id: rectItem
             Layout.fillWidth: parent
             Layout.fillHeight: parent
-            color: "green"
+            color: "#403f3f"
             border.color: "black"
             border.width: 1
 
